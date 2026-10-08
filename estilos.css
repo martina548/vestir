@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');     /*font-family: "Yusei Magic", sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');                                                                       /*font-family: "Nunito Sans", sans-serif;*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --blanco: #eeedec;
+    --fondo: #d1dda6;
+    --azul: #01497C;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--azul);
+}
+
+h1 {
+    font-family: "Yusei Magic", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+    text-align: center;
+}
+
+h2 {
+    color: var(--blanco);
+    font-size: 0.8em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "Yusei Magic", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.btn {
+    color: var(--blanco);
+    background-color: var(--azul);
+    font-family: "Yusei Magic", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 1em;
+}
+
+.sticker {
+    background-color: var(--blanco);
+    padding: 0.2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: block;
+    position: absolute;
+    font-family: "Yusei Magic", sans-serif;
+    right: 0;
+    top: 10px;
+}
+
+.links {
+    padding-top: 0.2em;
+    color: var(--azul);
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.resp {
+position: relative;
+}
+
+p {
+    font-size: 0.8em;
+    text-align: justify;
+    letter-spacing: 0.05%;
+}
+
+button {
+    color: var(--azul);
+    background-color: var(--blanco);
+    font-family: "Yusei Magic", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: none;
+}
+
+
+                                                                     /* * * * * * * * * * MOBILE FIRST * * * * * * * * * */
+
+/* * * Header * * */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+header img {
+    height: 20px;
+}
+
+#burger img {
+    height: 20px;
+}
+
+nav {
+    display: none;
+}
+
+/* * * Hero * * */
+#principal {
+    background-image: url("imgs/fondo.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(197, 209, 157, 0.5);
+    z-index: 0;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner img {
+    width: 200px;
+}
+
+header, nav, #banner {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* * * Materiales * * */
+#materiales {
+    background-color: var(--blanco);
+    padding: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#materiales article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#materiales article img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 0.5em;
+}
+
+#materiales p, h3{
+    max-width: 200px;
+}
+
+#display {
+    display: none;
+}
+
+/* * * Grilla * * */
+#grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0;
+}
+
+#foto {
+    grid-row: 1;
+    background-image: url(imgs/escenario.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#info {
+    grid-row: 2;
+    background-color: var(--azul);
+    height: 15em;
+    align-content: center;
+}
+
+#info h2 {
+    color: var(--blanco);
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: 1em;
+}
+
+#info h1 {
+    color: var(--blanco);
+    margin-right: 2em;
+    margin-left: 2em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#cta {
+    display: flex;
+    grid-row: 3;
+    background-image: url(imgs/bts.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-content: center;
+    justify-content: center;
+}
+
+#cta .btn {
+    align-self: center;
+}
+
+#blog {
+    display: none;
+}
+
+/* * * Tienda * * */
+#marcas {
+    background-color: var(--blanco);
+    padding: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#marcas article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#marcas article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#marcas h1 {
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+}
+
+#marcas h1, p, img {
+    max-width: 270px;
+}
+
+#display2 { 
+    display: none;
+}
+
+/* * * Formulario * * */
+#form {
+        background-color: var(--azul);
+        padding: 2em;
+        padding-bottom: 2.5em;
+}
+
+fieldset {
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+legend {
+    font-family: "Yusei Magic", sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--blanco);
+    margin-bottom: 0.5em;
+}
+
+input, select, textarea {
+    background-color: var(--blanco);
+    box-shadow: none;
+    border: none;
+    padding: 0.2em;
+    padding-left: 1em;
+}
+
+input, input::placeholder {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 0.9em;
+}
+
+#form .btn {
+    background-color: var(--blanco);
+    color: var(--azul);
+    margin: 0;
+
+    padding: 0.2em 1em;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+input, form .btn {
+    height: 25px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+/* * * Footer * * */
+footer {
+    margin: 2em;
+    margin-right: 8%;
+}
+
+footer p {
+    padding-top: 0.2em;
+    color: var(--azul);
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+}
+
+
+                                                                     /* * * * * * * * * * TABLET * * * * * * * * * */
+
+@media all and (min-width:768px) {
+
+    .btn {
+        font-size: 1.3em;
+        padding: 0.4em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.5em;
+    }
+
+    /* * * Header * * */
+    #principal {
+        background-attachment: fixed;
+    }
+
+    #burger {
+        display: none;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+    }
+
+    nav a {
+        color: var(--blanco);
+        font-family: "Yusei Magic", sans-serif;
+        font-size: 1.3em;
+        letter-spacing: 0.2em;
+    }
+
+    header {
+        margin-left: 5em;
+        margin-right: 5em;
+        border-bottom: 2px solid var(--blanco);
+    }
+
+    header img {
+        height: 20px;
+        margin-right: 1em;
+    }
+
+    #user {
+    height: 20px;
+    }
+
+    #lupa {
+        height: 20px;
+    }
+
+    /* * * Hero * * */
+    #principal {
+        min-height: 25em;
+    }
+
+    #banner {
+        min-height: 25em;
+    }
+
+    #banner img {
+        width: 370px;
+        height: auto;
+        max-width: 100%;
+    }
+
+    #banner h2 { 
+        font-size: 23.5px;
+    }
+
+    /* * * Materiales * * */
+    #art {
+        display: flex;
+    }
+
+    #display {
+        display: flex;
+    }
+
+    #art article, #display article { 
+        width: 50%;
+    }
+
+    #materiales {
+        padding: 3em;
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    #materiales h1 {
+        margin-bottom: 0.2em;
+    }
+
+    #materiales article img {
+        max-width: 250px;
+    }
+    
+    #materiales article p, h3 {
+        max-width: 400px;
+    }
+
+    /* * * Grilla * * */
+    #grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0;
+    }
+
+    #info {
+        background-color: var(--fondo);
+    }
+
+    #info h2, #info h1 {
+        color: var(--azul);
+    }
+
+    #foto {
+        grid-column: span 2;
+    }
+
+    #cta {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #blog {
+        background-color: var(--azul);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: grid;
+        grid-column: 1;
+        grid-column: span 2;
+        grid-row: 3;
+        grid-row: span 2;
+        padding: 3em;
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    #blog h1, #blog h2, #blog p {
+        color: var(--blanco);
+        text-align: justify;
+        max-width: 41em;
+    }
+
+    #blog h2 {
+        font-size: 23.5px;
+        text-transform: uppercase;
+        word-spacing: 28px;
+    }
+
+    /* * * Tienda * * */
+    #marcas {
+        display: block;
+        background-color: var(--blanco);
+        padding: 3em;
+        padding-left: 5em;
+        padding-right: 5em;
+        align-items: center;
+    }
+
+    #marcasarts {
+        display: flex;
+        width: 100%;
+    }
+
+    #marcas article {
+        width: 50%;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    /* * * Formulario * * */
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    form .btn {
+        font-size: 1em;
+    }
+
+    input, #form .btn {
+    height: 25px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    }
+
+    fieldset {
+        border: none;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* * * Footer * * */
+    footer {
+        align-items: center;
+        margin: 2em;
+    }
+
+    footer p {
+        letter-spacing: 0.08em;
+    }
+}
+
+
+                                                                     /* * * * * * * * * * ESCRITORIO * * * * * * * * * */
+
+@media all and (min-width:1200px) {
+    /* * * Principal * * */
+    header img {
+    height: 35px;
+    }
+
+    /* * * Materiales * * */
+    #materiales {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #materiales h1 {
+        grid-column: span 2;
+    }
+    
+    /* * * Grilla * * */
+    #grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /* * * Marcas * * */
+    #display2 {
+        display: flex;
+    }
+
+    #marcas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: baseline;
+    }
+
+    #marcasarts {
+        display: flex;
+    }
+
+}
